@@ -18,3 +18,9 @@ duration_min = 5
 [as_config.rvps_config]
 store_type = "LocalFs"
 remote_addr = ""
+
+# Temporary - move config to specific folder for ITA
+[intel_trust_authority_config]
+base_url = "https://api.trustauthority.intel.com"
+api_key = "tBfd5kKX2x9ahbodKV1..."
+certs_file = "/etc/intel-trust-authority-certs.txt"

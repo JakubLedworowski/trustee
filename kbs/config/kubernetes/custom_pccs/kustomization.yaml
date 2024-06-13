@@ -15,3 +15,6 @@ configMapGenerator:
 - files:
   - sgx_default_qcnl.conf
   name: dcap-attestation-conf
+- files:
+  - intel-trust-authority-certs.txt
+  name: intel-trust-authority-certs

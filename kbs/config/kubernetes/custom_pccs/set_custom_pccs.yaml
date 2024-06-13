@@ -11,6 +11,9 @@ spec:
         - name: qplconf
           mountPath: /etc/sgx_default_qcnl.conf
           subPath: sgx_default_qcnl.conf
+        - name: ita-certs
+          mountPath: /etc/intel-trust-authority-certs.txt
+          subPath: intel-trust-authority-certs.txt
       volumes:
       - name: qplconf
         configMap:
@@ -18,3 +21,9 @@ spec:
           items:
           - key: sgx_default_qcnl.conf
             path: sgx_default_qcnl.conf
+      - name: ita-certs
+        configMap:
+          name: intel-trust-authority-certs
+          items:
+            - key: intel-trust-authority-certs.txt
+              path: intel-trust-authority-certs.txt
